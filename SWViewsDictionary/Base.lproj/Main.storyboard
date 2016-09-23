@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SWViewsDictionary" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbT-0I-wYp">
+                                <rect key="frame" x="20" y="20" width="560" height="60"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tp6-Yi-rTe">
+                                        <rect key="frame" x="152" y="15" width="256" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLz-DC-Dep">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.9355407067" blue="0.39608344029999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="imc-Ie-D0Q"/>
+                                                    <constraint firstAttribute="width" constant="80" id="whY-bg-yIt"/>
+                                                </constraints>
+                                                <state key="normal" title="Weather"/>
+                                                <connections>
+                                                    <action selector="changeWeather:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RSm-WV-4tj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHU-ik-ztQ">
+                                                <rect key="frame" x="88" y="0.0" width="80" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.9355407067" blue="0.39608344029999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="PTW-Ky-Pra"/>
+                                                    <constraint firstAttribute="width" constant="80" id="mig-SE-ta2"/>
+                                                </constraints>
+                                                <state key="normal" title="Events"/>
+                                                <connections>
+                                                    <action selector="changeEvents:" destination="BYZ-38-t0r" eventType="touchUpInside" id="edm-eu-FwM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBd-YD-yWq">
+                                                <rect key="frame" x="176" y="0.0" width="80" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.9355407067" blue="0.39608344029999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="539-nL-ruo"/>
+                                                    <constraint firstAttribute="height" constant="30" id="ssw-F1-GHX"/>
+                                                </constraints>
+                                                <state key="normal" title="People"/>
+                                                <connections>
+                                                    <action selector="changePeople:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KYO-oM-yRO"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="lLz-DC-Dep" firstAttribute="top" secondItem="tp6-Yi-rTe" secondAttribute="top" id="5iJ-PB-kth"/>
+                                            <constraint firstItem="oBd-YD-yWq" firstAttribute="top" secondItem="tp6-Yi-rTe" secondAttribute="top" id="okS-bs-d2K"/>
+                                            <constraint firstItem="PHU-ik-ztQ" firstAttribute="top" secondItem="tp6-Yi-rTe" secondAttribute="top" id="qSi-xt-X7M"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="5iJ-PB-kth"/>
+                                                <exclude reference="qSi-xt-X7M"/>
+                                                <exclude reference="okS-bs-d2K"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ADd-zg-zcU"/>
+                                    <constraint firstItem="tp6-Yi-rTe" firstAttribute="centerX" secondItem="cbT-0I-wYp" secondAttribute="centerX" id="a1O-1I-Wan"/>
+                                    <constraint firstItem="tp6-Yi-rTe" firstAttribute="centerY" secondItem="cbT-0I-wYp" secondAttribute="centerY" id="cYF-xW-V10"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fHN-oT-nyF">
+                                <rect key="frame" x="20" y="88" width="560" height="492"/>
+                                <color key="backgroundColor" red="0.47023705430000001" green="0.81287370469999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cbT-0I-wYp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="7TY-tc-xqG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fHN-oT-nyF" secondAttribute="trailing" id="K0z-EW-CpD"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="fHN-oT-nyF" secondAttribute="leading" id="QoB-rQ-ehX"/>
+                            <constraint firstItem="fHN-oT-nyF" firstAttribute="top" secondItem="cbT-0I-wYp" secondAttribute="bottom" constant="8" id="Qte-K0-1Gk"/>
+                            <constraint firstItem="cbT-0I-wYp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="YZe-kH-7Ez"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fHN-oT-nyF" secondAttribute="bottom" constant="20" id="xB7-VN-xX0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cbT-0I-wYp" secondAttribute="trailing" id="xeK-LS-XHG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myContainerView" destination="fHN-oT-nyF" id="zom-h5-DTb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="681" y="558"/>
+        </scene>
+    </scenes>
+</document>
